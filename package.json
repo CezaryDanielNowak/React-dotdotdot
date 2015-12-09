@@ -1,0 +1,26 @@
+{
+  "name": "react-dotdotdot",
+  "version": "1.0.0",
+  "description": "Multiline text ellipsis for react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CezaryDanielNowak/React-dotdotdot.git"
+  },
+  "author": "Cezary Daniel Nowak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CezaryDanielNowak/React-dotdotdot/issues"
+  },
+  "homepage": "https://github.com/CezaryDanielNowak/React-dotdotdot#readme",
+  "dependencies": {
+
+  },
+  "peerDependencies": {
+    "react": "0.14.3",
+    "react-dom": "0.14.3"
+  },
+}
