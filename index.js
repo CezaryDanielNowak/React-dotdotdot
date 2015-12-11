@@ -10,7 +10,8 @@ export default class Dotdotdot extends Component {
     children: PropTypes.node,
     clamp: PropTypes.oneOfType([
       PropTypes.string,
-      PropTypes.number
+      PropTypes.number,
+      PropTypes.bool
     ]).isRequired,
     ellipsis: PropTypes.string
   }
@@ -25,7 +26,9 @@ export default class Dotdotdot extends Component {
   }
 
   componentDidMount() {
-    this.dotdotdot()
+    if (this.props.clamp) {
+      this.dotdotdot()
+    }
   }
 
   dotdotdot() {
