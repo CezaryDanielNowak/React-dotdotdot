@@ -5,8 +5,11 @@ Cross-browser multiline text ellipsis for react
 <img src="http://dotdotdot.frebsite.nl/img/preview.png" width="100%" border="0" />
 
 
-Based on:
+Inspired by:
 https://github.com/BeSite/jQuery.dotdotdot
+
+Internally uses:
+https://www.npmjs.com/package/clamp-js
 
 
 Sample usage
@@ -20,8 +23,13 @@ import Dotdotdot from 'react-dotdotdot'
 render() {
 	return (
 		<div>
-			<Dotdotdot>
-
+			<Dotdotdot clamp={3}>
+				<p>
+					Long, long <br />
+					content,<br />
+					3 lines <br />
+					will be shown.
+				</p>
 			</Dotdotdot>
 		</div>
 	)
@@ -30,39 +38,8 @@ render() {
 ```
 
 
-
 Dotdotdot props:
 ----------------
-```
-	/*	The text to add as ellipsis. */
-	ellipsis	: '... '
+*clamp* (Number | String | 'auto'). This controls where and when to clamp the text of an element. Submitting a number controls the number of lines that should be displayed. Second, you can submit a CSS value (in px or em) that controls the height of the element as a String. Finally, you can submit the word 'auto' as a string. Auto will try to fill up the available space with the content and then automatically clamp once content no longer fits. This last option should only be set if a static height is being set on the element elsewhere (such as through CSS) otherwise no clamping will be done.
 
-	/*	How to cut off the text/html: 'word'/'letter'/'children' */
-	wrap		: 'word',
-
-	/*	Wrap-option fallback to 'letter' for long words */
-	fallbackToLetter: true,
-
-	/*	Whether to update the ellipsis: true/'window' */
-	watch		: false,
-
-	/*	Optionally set a max-height, if null, the height will be measured. */
-	height		: null,
-
-	/*	Deviation for the height-option. */
-	tolerance	: 0,
-
-	/*	Callback function that is fired after the ellipsis is added,
-		receives two parameters: isTruncated(boolean), orgContent(string). */
-	callback	: function( isTruncated, orgContent ) {},
-
-	lastCharacter	: {
-
-		/*	Remove these characters from the end of the truncated text. */
-		remove		: [ ' ', ',', ';', '.', '!', '?' ],
-
-		/*	Don't add an ellipsis if this array contains 
-			the last character of the truncated text. */
-		noEllipsis	: []
-	}
-```
+*ellipsis*  (String). The character to insert at the end of the HTML element after truncation is performed. This defaults to an ellipsis (…).
