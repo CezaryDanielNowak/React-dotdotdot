@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/CezaryDanielNowak/React-dotdotdot#readme",
   "dependencies": {
-
+    "clamp-js": "0.7.0"
   },
   "peerDependencies": {
     "react": "0.14.3",
