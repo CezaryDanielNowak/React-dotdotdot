@@ -11,6 +11,11 @@ https://github.com/BeSite/jQuery.dotdotdot
 Internally uses:
 https://www.npmjs.com/package/clamp-js
 
+Installation
+----------------
+```
+npm install --save React-dotdotdot
+```
 
 Sample usage
 ----------------

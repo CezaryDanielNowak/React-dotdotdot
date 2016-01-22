@@ -1,8 +1,8 @@
 {
   "name": "react-dotdotdot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Multiline text ellipsis for react",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,7 +20,7 @@
     "clamp-js": "0.7.0"
   },
   "peerDependencies": {
-    "react": "0.14.3",
-    "react-dom": "0.14.3"
-  },
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3"
+  }
 }
