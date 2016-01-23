@@ -2,12 +2,13 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var clamp = require('clamp-js');
 var PropTypes = React.PropTypes;
-
-
+/**
+ * multuline text-overflow: ellipsis
+ */
 function Dotdotdot() {
-  /**
-   * multuline text-overflow: ellipsis
-   */
+  if(!(this instanceof Dotdotdot)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
 }
 
 Dotdotdot.prototype = Object.create(React.Component.prototype);
