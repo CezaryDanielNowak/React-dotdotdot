@@ -14,7 +14,7 @@ https://www.npmjs.com/package/clamp-js
 Installation
 ----------------
 ```
-npm install --save React-dotdotdot
+npm install --save react-dotdotdot
 ```
 
 Sample usage
