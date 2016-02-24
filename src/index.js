@@ -12,7 +12,7 @@ function Dotdotdot() {
 }
 
 Dotdotdot.prototype = Object.create(React.Component.prototype);
-Dotdotdot.prototype.componentDidMount = function() {
+Dotdotdot.prototype.componentDidUpdate = function() {
   if (this.props.clamp) {
     this.dotdotdot(ReactDOM.findDOMNode(this.refs.container));
   }
@@ -32,7 +32,7 @@ Dotdotdot.prototype.dotdotdot = function(container) {
 Dotdotdot.prototype.render = function() {
   return React.createElement(
     "div",
-    { ref: "container" },
+    { ref: "container", className: this.props.className },
     this.props.children
   );
 };
@@ -45,7 +45,8 @@ Dotdotdot.propTypes = {
     PropTypes.number,
     PropTypes.bool
   ]).isRequired,
-  truncationChar: PropTypes.string
+  truncationChar: PropTypes.string,
+  className: PropTypes.string
 };
 
 Dotdotdot.defaultProps = {
