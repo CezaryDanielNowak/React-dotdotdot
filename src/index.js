@@ -12,21 +12,24 @@ function Dotdotdot() {
 }
 
 Dotdotdot.prototype = Object.create(React.Component.prototype);
+Dotdotdot.prototype.componentDidMount = function() {
+  this.dotdotdot(ReactDOM.findDOMNode(this.refs.container));
+};
 Dotdotdot.prototype.componentDidUpdate = function() {
-  if (this.props.clamp) {
-    this.dotdotdot(ReactDOM.findDOMNode(this.refs.container));
-  }
+  this.dotdotdot(ReactDOM.findDOMNode(this.refs.container));
 };
 
 Dotdotdot.prototype.dotdotdot = function(container) {
-  if (container.length) {
-    throw new Error('Please provide exacly one child to dotdotdot');
-  }
+  if (this.props.clamp) {
+    if (container.length) {
+      throw new Error('Please provide exacly one child to dotdotdot');
+    }
 
-  clamp(container, {
-    clamp: this.props.clamp,
-    truncationChar: this.props.truncationChar
-  });
+    clamp(container, {
+      clamp: this.props.clamp,
+      truncationChar: this.props.truncationChar
+    });
+  }
 };
 
 Dotdotdot.prototype.render = function() {
