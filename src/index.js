@@ -13,26 +13,29 @@ function Dotdotdot() {
 
 Dotdotdot.prototype = Object.create(React.Component.prototype);
 Dotdotdot.prototype.componentDidMount = function() {
-  if (this.props.clamp) {
-    this.dotdotdot(ReactDOM.findDOMNode(this.refs.container));
-  }
+  this.dotdotdot(ReactDOM.findDOMNode(this.refs.container));
+};
+Dotdotdot.prototype.componentDidUpdate = function() {
+  this.dotdotdot(ReactDOM.findDOMNode(this.refs.container));
 };
 
 Dotdotdot.prototype.dotdotdot = function(container) {
-  if (container.length) {
-    throw new Error('Please provide exacly one child to dotdotdot');
-  }
+  if (this.props.clamp) {
+    if (container.length) {
+      throw new Error('Please provide exacly one child to dotdotdot');
+    }
 
-  clamp(container, {
-    clamp: this.props.clamp,
-    truncationChar: this.props.truncationChar
-  });
+    clamp(container, {
+      clamp: this.props.clamp,
+      truncationChar: this.props.truncationChar
+    });
+  }
 };
 
 Dotdotdot.prototype.render = function() {
   return React.createElement(
     "div",
-    { ref: "container" },
+    { ref: "container", className: this.props.className },
     this.props.children
   );
 };
@@ -45,7 +48,8 @@ Dotdotdot.propTypes = {
     PropTypes.number,
     PropTypes.bool
   ]).isRequired,
-  truncationChar: PropTypes.string
+  truncationChar: PropTypes.string,
+  className: PropTypes.string
 };
 
 Dotdotdot.defaultProps = {
