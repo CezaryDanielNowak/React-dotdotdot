@@ -1,6 +1,6 @@
 {
   "name": "react-dotdotdot",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "Multiline text ellipsis for react",
   "main": "src/index.js",
   "scripts": {
@@ -16,9 +16,7 @@
     "url": "https://github.com/CezaryDanielNowak/React-dotdotdot/issues"
   },
   "homepage": "https://github.com/CezaryDanielNowak/React-dotdotdot#readme",
-  "dependencies": {
-    "clamp-js": "0.7.0"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "react": "^0.14.3 || ^15.0.0",
     "react-dom": "^0.14.3 || ^15.0.0"
