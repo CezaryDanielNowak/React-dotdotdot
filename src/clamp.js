@@ -89,7 +89,7 @@
      * on the current height of the element and the line-height of the text.
      */
     function getMaxLines(height) {
-      var availHeight = height || element.clientHeight,
+      var availHeight = height || (element.parentNode.clientHeight-element.offsetTop),
         lineHeight = getLineHeight(element);
 
       return Math.max(Math.floor(availHeight / lineHeight), 0);
