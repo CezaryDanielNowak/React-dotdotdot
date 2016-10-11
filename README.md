@@ -49,7 +49,10 @@ Dotdotdot props:
 
 *ellipsis*  (String). The character to insert at the end of the HTML element after truncation is performed. This defaults to an ellipsis (…).
 
-
+Notes
+-----------------
+React-dotdotdot is simple plugin, if you need more functionality, consider using react-truncate
+https://www.npmjs.com/package/react-truncate
 
 Changelog
 -----------------
