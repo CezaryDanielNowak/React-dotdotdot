@@ -9,11 +9,16 @@ function Dotdotdot() {
   if(!(this instanceof Dotdotdot)) {
     throw new TypeError("Cannot call a class as a function");
   }
+  this.update = this.update.bind(this);
 }
 
 Dotdotdot.prototype = Object.create(React.Component.prototype);
 Dotdotdot.prototype.componentDidMount = function() {
   this.dotdotdot(ReactDOM.findDOMNode(this.refs.container));
+  window.addEventListener('resize', this.update, false);
+};
+Dotdotdot.prototype.componentWillUnmount = function() {
+  window.removeEventListener('resize', this.update, false);
 };
 Dotdotdot.prototype.componentDidUpdate = function() {
   this.dotdotdot(ReactDOM.findDOMNode(this.refs.container));
@@ -30,6 +35,9 @@ Dotdotdot.prototype.dotdotdot = function(container) {
       truncationChar: this.props.truncationChar
     });
   }
+};
+Dotdotdot.prototype.update = function() {
+    this.forceUpdate();
 };
 
 Dotdotdot.prototype.render = function() {
