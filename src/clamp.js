@@ -135,10 +135,9 @@
       if (elem.lastChild.children && elem.lastChild.children.length > 0) {
         return getLastChild(Array.prototype.slice.call(elem.children).pop());
       }
-      //This is the absolute last child, a text node, but something's wrong with it. Remove it and keep trying
+      //This is the absolute last child, a text node, but something's wrong with it. Nest into it and keep trying
       else if (!elem.lastChild || !elem.lastChild.nodeValue || elem.lastChild.nodeValue === '' || elem.lastChild.nodeValue == opt.truncationChar) {
-        elem.lastChild.parentNode.removeChild(elem.lastChild);
-        return getLastChild(element);
+        return getLastChild(element.lastChild);
       }
       //This is the last child we want, return it
       else {
