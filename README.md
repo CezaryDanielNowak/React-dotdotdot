@@ -56,6 +56,9 @@ https://www.npmjs.com/package/react-truncate
 
 Changelog
 -----------------
+1.0.17
+- Support for IE11, Edge and Firefox (thanks, @kkwiatkowski)
+
 1.0.16
 - Remove clamp-js from package.json dependencies, as it's not maintained anymore.
 - Bugfix for `TypeError: elem.lastChild is null` in Firefox.
