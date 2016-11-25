@@ -32,6 +32,7 @@ Dotdotdot.prototype.dotdotdot = function(container) {
 
     clamp(container, {
       clamp: this.props.clamp,
+      useNativeClamp: this.props.useNativeClamp,
       truncationChar: this.props.truncationChar
     });
   }
