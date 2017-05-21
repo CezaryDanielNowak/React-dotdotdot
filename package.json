@@ -16,7 +16,9 @@
     "url": "https://github.com/CezaryDanielNowak/React-dotdotdot/issues"
   },
   "homepage": "https://github.com/CezaryDanielNowak/React-dotdotdot#readme",
-  "dependencies": {},
+  "dependencies": {
+    "prop-types": "^15.5.10"
+  },
   "peerDependencies": {
     "react": "^0.14.3 || ^15.0.0",
     "react-dom": "^0.14.3 || ^15.0.0"
