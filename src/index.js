@@ -44,7 +44,7 @@ Dotdotdot.prototype.update = function() {
 Dotdotdot.prototype.render = function() {
   return React.createElement(
     "div",
-    { ref: "container", className: this.props.className },
+    { ref: "container", className: 'dotdotdot ' + this.props.className },
     this.props.children
   );
 };
