@@ -14,14 +14,14 @@ function Dotdotdot() {
 
 Dotdotdot.prototype = Object.create(React.Component.prototype);
 Dotdotdot.prototype.componentDidMount = function() {
-  this.dotdotdot(ReactDOM.findDOMNode(this.refs.container));
+  this.dotdotdot(ReactDOM.findDOMNode(this.container));
   window.addEventListener('resize', this.update, false);
 };
 Dotdotdot.prototype.componentWillUnmount = function() {
   window.removeEventListener('resize', this.update, false);
 };
 Dotdotdot.prototype.componentDidUpdate = function() {
-  this.dotdotdot(ReactDOM.findDOMNode(this.refs.container));
+  this.dotdotdot(ReactDOM.findDOMNode(this.container));
 };
 
 Dotdotdot.prototype.dotdotdot = function(container) {
@@ -42,9 +42,13 @@ Dotdotdot.prototype.update = function() {
 };
 
 Dotdotdot.prototype.render = function() {
+  var _ref = function (container) {
+    this.container = container;
+  }.bind(this);
   return React.createElement(
     "div",
-    { ref: "container", className: this.props.className },
+    { ref: _ref,
+    className: this.props.className },
     this.props.children
   );
 };
