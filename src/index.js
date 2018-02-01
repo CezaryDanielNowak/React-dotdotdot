@@ -1,7 +1,9 @@
 var React = require('react');
-var ReactDOM = require('react-dom');
 var clamp = require('./clamp.js');
+var pick = require('object.pick');
 var PropTypes = require('prop-types');
+var ReactDOM = require('react-dom');
+
 /**
  * multuline text-overflow: ellipsis
  */
@@ -10,12 +12,19 @@ function Dotdotdot() {
     throw new TypeError("Cannot call a class as a function");
   }
   this.update = this.update.bind(this);
+  this.getContainerRef = function (container) {
+    this.container = container;
+  }.bind(this);
 }
 
 Dotdotdot.prototype = Object.create(React.Component.prototype);
 Dotdotdot.prototype.componentDidMount = function() {
-  this.dotdotdot(ReactDOM.findDOMNode(this.container));
   window.addEventListener('resize', this.update, false);
+  window.addEventListener('load', function(event) {
+    // NOTE: It's possible, not all fonts are loaded at this point
+    this.update();
+  }.bind(this));
+  this.dotdotdot(ReactDOM.findDOMNode(this.container));
 };
 Dotdotdot.prototype.componentWillUnmount = function() {
   window.removeEventListener('resize', this.update, false);
@@ -29,26 +38,27 @@ Dotdotdot.prototype.dotdotdot = function(container) {
     if (container.length) {
       throw new Error('Please provide exacly one child to dotdotdot');
     }
-
-    clamp(container, {
-      clamp: this.props.clamp,
-      useNativeClamp: this.props.useNativeClamp,
-      truncationChar: this.props.truncationChar
-    });
-  }
+    clamp(container, pick(this.props, [
+      'animate',
+      'clamp',
+      'splitOnChars',
+      'truncationChar',
+      'truncationHTML',
+      'useNativeClamp'
+    ]));
+  };
 };
 Dotdotdot.prototype.update = function() {
     this.forceUpdate();
 };
 
 Dotdotdot.prototype.render = function() {
-  var _ref = function (container) {
-    this.container = container;
-  }.bind(this);
   return React.createElement(
     "div",
-    { ref: _ref,
-    className: this.props.className },
+    {
+      ref: this.getContainerRef,
+      className: this.props.className
+    },
     this.props.children
   );
 };

@@ -46,16 +46,35 @@ render() {
 Dotdotdot props:
 ----------------
 *clamp* (Number | String | 'auto'). This controls where and when to clamp the text of an element. Submitting a number controls the number of lines that should be displayed. Second, you can submit a CSS value (in px or em) that controls the height of the element as a String. Finally, you can submit the word 'auto' as a string. Auto will try to fill up the available space with the content and then automatically clamp once content no longer fits. This last option should only be set if a static height is being set on the element elsewhere (such as through CSS) otherwise no clamping will be done.
-
-*ellipsis*  (String). The character to insert at the end of the HTML element after truncation is performed. This defaults to an ellipsis (…).
+*useNativeClamp*: [default: `true`] Use -webkit-line-clamp available in Webkit (Chrome, Safari) only.
+*splitOnChars*: [default: `['.', '-', '–', '—', ' ']`] Split on sentences (periods), hypens, en-dashes, em-dashes, and words (spaces).
+*animate*: [default: false] animated clamp
+*truncationChar*: The character to insert at the end of the HTML element after truncation is performed. This defaults to an ellipsis (…).
+  `useNativeClamp` overrides it to default.
+*truncationHTML*: String of HTML to use instead of truncationChar
 
 Notes
 -----------------
 React-dotdotdot is simple plugin, if you need more functionality, consider using react-truncate
 https://www.npmjs.com/package/react-truncate
 
+Known issues:
+-----------------
+- react-dotdotdot does not work with text containers with nested markup.
+- `padding-bottom` CSS rule breaks clamp
+
 Changelog
 -----------------
+1.2.1
+- Update documentation
+- Re-trigger clamp on window.load
+- Allow for all params to passed to clamp-js (splitOnChars, animate, etc)
+
+1.2.0
+- Fix word breaking for long text (issues #21 and #15; Thanks @krzysztofczernek).
+- calculate correct height for many childs + clamp: 'auto' (thanks @rurquia)
+- Update dependencies to support react 16 (thanks @emersonbroga)
+
 1.0.17
 - Support for IE11, Edge and Firefox (thanks, @kkwiatkowski)
 

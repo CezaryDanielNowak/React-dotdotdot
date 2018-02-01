@@ -81,7 +81,7 @@ var App = function (_React$Component) {
             _react2.default.createElement(
               'h2',
               null,
-              'Light'
+              'Light / clamp=3 useNativeClamp=false'
             ),
             _react2.default.createElement(
               _reactDotdotdot2.default,
@@ -92,13 +92,7 @@ var App = function (_React$Component) {
               _react2.default.createElement(
                 'p',
                 null,
-                '1Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled ',
-                _react2.default.createElement(
-                  'span',
-                  null,
-                  '`ORANGE MARMALADE\''
-                ),
-                ', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
+                'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled `ORANGE MARMALADE\', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
               )
             )
           ),
@@ -108,7 +102,7 @@ var App = function (_React$Component) {
             _react2.default.createElement(
               'h2',
               null,
-              'Normal'
+              'Normal / clamp=7'
             ),
             _react2.default.createElement(
               _reactDotdotdot2.default,
@@ -116,13 +110,7 @@ var App = function (_React$Component) {
               _react2.default.createElement(
                 'p',
                 null,
-                '2Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled ',
-                _react2.default.createElement(
-                  'span',
-                  null,
-                  '`ORANGE MARMALADE\''
-                ),
-                ', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
+                'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled `ORANGE MARMALADE\', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
               )
             )
           ),
@@ -132,18 +120,16 @@ var App = function (_React$Component) {
             _react2.default.createElement(
               'h2',
               null,
-              'Heavy'
+              'Heavy / clamp=7'
             ),
             _react2.default.createElement(
-              'p',
-              null,
-              'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled ',
+              _reactDotdotdot2.default,
+              { clamp: 7 },
               _react2.default.createElement(
-                'span',
+                'p',
                 null,
-                '`ORANGE MARMALADE\''
-              ),
-              ', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
+                'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled `ORANGE MARMALADE\', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
+              )
             )
           )
         ),
@@ -161,18 +147,16 @@ var App = function (_React$Component) {
             _react2.default.createElement(
               'h2',
               null,
-              'Tight'
+              'Tight / clamp=5 useNativeClamp=false truncationChar="\xBB"'
             ),
             _react2.default.createElement(
-              'p',
-              null,
-              'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled ',
+              _reactDotdotdot2.default,
+              { clamp: 5, useNativeClamp: false, truncationChar: '\xBB' },
               _react2.default.createElement(
-                'span',
+                'p',
                 null,
-                '`ORANGE MARMALADE\''
-              ),
-              ', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
+                'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled `ORANGE MARMALADE\', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
+              )
             )
           ),
           _react2.default.createElement(
@@ -181,18 +165,16 @@ var App = function (_React$Component) {
             _react2.default.createElement(
               'h2',
               null,
-              'Normal'
+              'Normal / clamp=5 useNativeClamp=false truncationHTML="<br /><marquee>\u2026</marquee>" truncationChar=""'
             ),
             _react2.default.createElement(
-              'p',
-              null,
-              'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled ',
+              _reactDotdotdot2.default,
+              { clamp: 5, useNativeClamp: false, truncationHTML: '<br /><marquee>\u2026</marquee>', truncationChar: '' },
               _react2.default.createElement(
-                'span',
+                'p',
                 null,
-                '`ORANGE MARMALADE\''
-              ),
-              ', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
+                'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled `ORANGE MARMALADE\', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
+              )
             )
           ),
           _react2.default.createElement(
@@ -206,13 +188,7 @@ var App = function (_React$Component) {
             _react2.default.createElement(
               'p',
               null,
-              'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled ',
-              _react2.default.createElement(
-                'span',
-                null,
-                '`ORANGE MARMALADE\''
-              ),
-              ', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
+              'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled `ORANGE MARMALADE\', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
             )
           )
         ),
@@ -235,13 +211,7 @@ var App = function (_React$Component) {
             _react2.default.createElement(
               'p',
               null,
-              'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled ',
-              _react2.default.createElement(
-                'span',
-                null,
-                '`ORANGE MARMALADE\''
-              ),
-              ', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
+              'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled `ORANGE MARMALADE\', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
             )
           ),
           _react2.default.createElement(
@@ -255,13 +225,7 @@ var App = function (_React$Component) {
             _react2.default.createElement(
               'p',
               null,
-              'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled ',
-              _react2.default.createElement(
-                'span',
-                null,
-                '`ORANGE MARMALADE\''
-              ),
-              ', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
+              'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled `ORANGE MARMALADE\', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
             )
           ),
           _react2.default.createElement(
@@ -275,13 +239,7 @@ var App = function (_React$Component) {
             _react2.default.createElement(
               'p',
               null,
-              'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled ',
-              _react2.default.createElement(
-                'span',
-                null,
-                '`ORANGE MARMALADE\''
-              ),
-              ', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
+              'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled `ORANGE MARMALADE\', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
             )
           )
         ),
@@ -304,13 +262,7 @@ var App = function (_React$Component) {
             _react2.default.createElement(
               'p',
               null,
-              'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled ',
-              _react2.default.createElement(
-                'span',
-                null,
-                '`ORANGE MARMALADE\''
-              ),
-              ', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
+              'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled `ORANGE MARMALADE\', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
             )
           ),
           _react2.default.createElement(
@@ -324,13 +276,7 @@ var App = function (_React$Component) {
             _react2.default.createElement(
               'p',
               null,
-              'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled ',
-              _react2.default.createElement(
-                'span',
-                null,
-                '`ORANGE MARMALADE\''
-              ),
-              ', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
+              'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled `ORANGE MARMALADE\', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
             )
           ),
           _react2.default.createElement(
@@ -344,13 +290,7 @@ var App = function (_React$Component) {
             _react2.default.createElement(
               'p',
               null,
-              'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled ',
-              _react2.default.createElement(
-                'span',
-                null,
-                '`ORANGE MARMALADE\''
-              ),
-              ', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
+              'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled `ORANGE MARMALADE\', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
             )
           )
         ),
@@ -373,13 +313,7 @@ var App = function (_React$Component) {
             _react2.default.createElement(
               'p',
               null,
-              'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled ',
-              _react2.default.createElement(
-                'span',
-                null,
-                '`ORANGE MARMALADE\''
-              ),
-              ', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
+              'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled `ORANGE MARMALADE\', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
             )
           ),
           _react2.default.createElement(
@@ -393,13 +327,7 @@ var App = function (_React$Component) {
             _react2.default.createElement(
               'p',
               null,
-              'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled ',
-              _react2.default.createElement(
-                'span',
-                null,
-                '`ORANGE MARMALADE\''
-              ),
-              ', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
+              'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled `ORANGE MARMALADE\', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
             )
           ),
           _react2.default.createElement(
@@ -413,13 +341,7 @@ var App = function (_React$Component) {
             _react2.default.createElement(
               'p',
               null,
-              'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled ',
-              _react2.default.createElement(
-                'span',
-                null,
-                '`ORANGE MARMALADE\''
-              ),
-              ', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
+              'Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled `ORANGE MARMALADE\', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody, so managed to put it into one of the cupboards as she fell past it.'
             )
           )
         )
@@ -17876,7 +17798,7 @@ module.exports = function pick(obj, keys) {
      * on the current height of the element and the line-height of the text.
      */
     function getMaxLines(height) {
-      var availHeight = height || element.clientHeight,
+      var availHeight = height || (element.parentNode.clientHeight-element.offsetTop),
         lineHeight = getLineHeight(element);
 
       return Math.max(Math.floor(availHeight / lineHeight), 0);
@@ -17899,9 +17821,9 @@ module.exports = function pick(obj, keys) {
       if (lh == 'normal') {
         // Normal line heights vary from browser to browser. The spec recommends
         // a value between 1.0 and 1.2 of the font size. Using 1.1 to split the diff.
-        lh = parseInt(computeStyle(elem, 'font-size')) * 1.2;
+        lh = parseInt(computeStyle(elem, 'font-size'), 10) * 1.2;
       }
-      return parseInt(lh);
+      return parseInt(lh, 10);
     }
 
 
@@ -18050,7 +17972,7 @@ module.exports = function pick(obj, keys) {
     if (clampValue == 'auto') {
       clampValue = getMaxLines();
     } else if (isCSSValue) {
-      clampValue = getMaxLines(parseInt(clampValue));
+      clampValue = getMaxLines(parseInt(clampValue, 10));
     }
 
     var clampedText;
@@ -18060,6 +17982,7 @@ module.exports = function pick(obj, keys) {
       sty.webkitBoxOrient = 'vertical';
       sty.display = '-webkit-box';
       sty.webkitLineClamp = clampValue;
+      sty.wordBreak = 'break-all';
 
       if (isCSSValue) {
         sty.height = opt.clamp + 'px';
@@ -18096,7 +18019,6 @@ function Dotdotdot() {
   }
   this.update = this.update.bind(this);
   this.getContainerRef = function (container) {
-    console.log('ref created', container);
     this.container = container;
   }.bind(this);
 }
@@ -18105,10 +18027,8 @@ Dotdotdot.prototype = Object.create(React.Component.prototype);
 Dotdotdot.prototype.componentDidMount = function() {
   window.addEventListener('resize', this.update, false);
   window.addEventListener('load', function(event) {
-    setTimeout(function() {
-      this.update();
-
-    }.bind(this), 1000)
+    // NOTE: It's possible, not all fonts are loaded at this point
+    this.update();
   }.bind(this));
   this.dotdotdot(ReactDOM.findDOMNode(this.container));
 };
@@ -18124,7 +18044,6 @@ Dotdotdot.prototype.dotdotdot = function(container) {
     if (container.length) {
       throw new Error('Please provide exacly one child to dotdotdot');
     }
-    console.log('dotdotdot', container.innerHTML)
     clamp(container, pick(this.props, [
       'clamp',
       'useNativeClamp',
