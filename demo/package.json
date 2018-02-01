@@ -1,0 +1,29 @@
+{
+  "name": "react-dotdotdot-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "watchify ./index.js -o ./dist/index.dist.js -t [ babelify --presets [ env react ] ]",
+    "build": "browserify ./index.js -o ./dist/index.dist.js -t [ babelify --presets [ env react ] ]"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prop-types": "*",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "react-dotdotdot": "file:../"
+  },
+  "devDependencies": {
+    "babel-cli": "6.24.0",
+    "babel-core": "6.24.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.2.2",
+    "babel-preset-react": "^6.24.1",
+    "babel-runtime": "6.23.0",
+    "babelify": "^7.3.0",
+    "browserify": "^15.2.0",
+    "watchify": "^3.10.0"
+  }
+}
