@@ -273,7 +273,6 @@
       sty.webkitBoxOrient = 'vertical';
       sty.display = '-webkit-box';
       sty.webkitLineClamp = clampValue;
-      sty.wordBreak = 'break-all';
 
       if (isCSSValue) {
         sty.height = opt.clamp + 'px';
