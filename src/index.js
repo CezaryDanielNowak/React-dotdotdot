@@ -20,14 +20,13 @@ function Dotdotdot() {
 Dotdotdot.prototype = Object.create(React.Component.prototype);
 Dotdotdot.prototype.componentDidMount = function() {
   window.addEventListener('resize', this.update, false);
-  window.addEventListener('load', function(event) {
-    // NOTE: It's possible, not all fonts are loaded at this point
-    this.update();
-  }.bind(this));
+  // NOTE: It's possible, not all fonts are loaded on window.load
+  window.addEventListener('load', this.update, false);
   this.dotdotdot(ReactDOM.findDOMNode(this.container));
 };
 Dotdotdot.prototype.componentWillUnmount = function() {
   window.removeEventListener('resize', this.update, false);
+  window.removeEventListener('load', this.update, false);
 };
 Dotdotdot.prototype.componentDidUpdate = function() {
   this.dotdotdot(ReactDOM.findDOMNode(this.container));
