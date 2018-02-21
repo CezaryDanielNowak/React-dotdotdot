@@ -71,6 +71,15 @@ Known issues:
 
 Changelog
 -----------------
+1.2.3
+- Add the option to choose a tag other than `div` (thanks @Kalita-Roman)
+- Fix demo on Firefox
+- Added `.npmignore` to limit package size
+
+1.2.2
+- Revert: Fix break word for long text
+- Update documentation
+
 1.2.1
 - Update documentation
 - Re-trigger clamp on window.load
