@@ -53,7 +53,7 @@ Dotdotdot.prototype.update = function() {
 
 Dotdotdot.prototype.render = function() {
   return React.createElement(
-    "div",
+    this.props.div,
     {
       ref: this.getContainerRef,
       className: this.props.className
@@ -72,12 +72,14 @@ Dotdotdot.propTypes = {
   ]).isRequired,
   truncationChar: PropTypes.string,
   useNativeClamp: PropTypes.bool,
-  className: PropTypes.string
+  className: PropTypes.string,
+  tag: PropTypes.string
 };
 
 Dotdotdot.defaultProps = {
   truncationChar: '\u2026',
-  useNativeClamp: true
+  useNativeClamp: true,
+  tag: 'div'
 };
 
 module.exports = Dotdotdot;
