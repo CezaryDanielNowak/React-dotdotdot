@@ -57,6 +57,8 @@ Dotdotdot props:
 
 **truncationHTML**: String of HTML to use instead of truncationChar
 
+**tagName**: [default: `div`] (String). The type of HTML tag which will wrap the component's content.
+
 Notes
 -----------------
 React-dotdotdot is simple plugin, if you need more functionality, consider using react-truncate
