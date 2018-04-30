@@ -33,6 +33,10 @@ Dotdotdot.prototype.componentDidUpdate = function() {
 };
 
 Dotdotdot.prototype.dotdotdot = function(container) {
+  if (!container) {
+    return;
+  }
+  
   if (this.props.clamp) {
     if (container.length) {
       throw new Error('Please provide exacly one child to dotdotdot');
