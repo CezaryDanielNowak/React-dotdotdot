@@ -3,6 +3,7 @@
   "version": "1.2.3",
   "description": "Multiline text ellipsis for react",
   "main": "src/index.js",
+  "typings": "src/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
