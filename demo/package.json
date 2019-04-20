@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npm run watch",
     "watch": "watchify ./index.js -o ./dist/index.dist.js -t [ babelify --presets [ env react ] ]",
     "build": "browserify ./index.js -o ./dist/index.dist.js -t [ babelify --presets [ env react ] ]"
   },
@@ -11,8 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "prop-types": "*",
-    "react": "16.2.0",
-    "react-dom": "16.2.0",
+    "react": ">=16.2.1",
+    "react-dom": ">=16.2.1",
     "react-dotdotdot": "file:../"
   },
   "devDependencies": {

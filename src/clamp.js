@@ -134,16 +134,24 @@
       //Current element has children, need to go deeper and get last child as a text node
       if (elem.lastChild.children && elem.lastChild.children.length > 0) {
         return getLastChild(Array.prototype.slice.call(elem.children).pop());
-      }
-      //Handle scenario where the last child is white-space node
-      else if (!elem.lastChild || !elem.lastChild.nodeValue || elem.lastChild.nodeValue === '' || elem.lastChild.nodeValue == opt.truncationChar) {
+      } else if (
+        !elem.lastChild
+        || !elem.lastChild.nodeValue
+        || elem.lastChild.nodeValue == opt.truncationChar
+        || elem.lastChild.nodeType === Node.COMMENT_NODE
+      ) {
+        // Handle scenario where the last child is white-space node
         var sibling = elem.lastChild;
         do {
           if (!sibling) {
             return;
           }
-          //TEXT_NODE
-          if (sibling.nodeType === 3 && ['', opt.truncationChar].indexOf(sibling.nodeValue) === -1) {
+          // TEXT_NODE
+          if (
+            sibling.nodeType === 3
+            && ['', opt.truncationChar].indexOf(sibling.nodeValue) === -1
+            && elem.lastChild.nodeType !== Node.COMMENT_NODE
+          ) {
             return sibling;
           }
           if (sibling.lastChild) {

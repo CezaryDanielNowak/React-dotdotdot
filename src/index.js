@@ -36,7 +36,7 @@ Dotdotdot.prototype.dotdotdot = function(container) {
   if (!container) {
     return;
   }
-  
+
   if (this.props.clamp) {
     if (container.length) {
       throw new Error('Please provide exacly one child to dotdotdot');
@@ -82,7 +82,7 @@ Dotdotdot.propTypes = {
 
 Dotdotdot.defaultProps = {
   truncationChar: '\u2026',
-  useNativeClamp: true,
+  useNativeClamp: false,
   tagName: 'div'
 };
 

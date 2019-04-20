@@ -69,9 +69,18 @@ Known issues:
 -----------------
 - react-dotdotdot does not work with text containers with nested markup.
 - `padding-bottom` CSS rule breaks clamp
+- `line-height` units might be important for React-dotdotdot. We recommend `px` over `em`
 
 Changelog
 -----------------
+1.3.0
+- `useNativeClamp` prop is set to false by default, it was causing some issues.
+- Comments are not counted as a text anymore
+- Remove Github's `potential security vulnerability ` with `react-dom`
+
+1.2.4
+- Added TypeScript typings (thanks @vojty and @feimosi)
+
 1.2.3
 - Add the option to choose a tag other than `div` (thanks @Kalita-Roman)
 - Fix demo on Firefox
