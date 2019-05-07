@@ -36,6 +36,7 @@
         clamp: options.clamp || 2,
         useNativeClamp: typeof(options.useNativeClamp) != 'undefined' ? options.useNativeClamp : true,
         splitOnChars: options.splitOnChars || ['.', '-', '–', '—', ' '], //Split on sentences (periods), hypens, en-dashes, em-dashes, and words (spaces).
+        splitEveryChars: options.splitEveryChars || 0,
         animate: options.animate || false,
         truncationChar: options.truncationChar || '…',
         truncationHTML: options.truncationHTML
@@ -189,6 +190,18 @@
         lastChunk = null;
       }
 
+      /**
+       * Split a string, at every nth position
+       */
+      function splitEvery(str, n) {
+        var arr = new Array;
+        for (var i = 0; i < str.length; i += n)
+        {
+          arr.push(str.substr(i, n));
+        }
+        return arr;
+      }
+
       var nodeValue = target.nodeValue.replace(opt.truncationChar, '');
 
       //Grab the next chunks
@@ -196,13 +209,17 @@
         //If there are more characters to try, grab the next one
         if (splitOnChars.length > 0) {
           splitChar = splitOnChars.shift();
+          chunks = nodeValue.split(splitChar);
         }
         //No characters to chunk by. Go character-by-character
         else {
           splitChar = '';
+          if (opt.splitEveryChars) {
+            chunks = splitEvery(nodeValue, opt.splitEveryChars);
+          } else {
+            chunks = nodeValue.split(splitChar);
+          }
         }
-
-        chunks = nodeValue.split(splitChar);
       }
 
       //If there are chunks left to remove, remove the last one and see if
