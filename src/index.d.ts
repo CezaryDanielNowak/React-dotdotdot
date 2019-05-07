@@ -7,6 +7,9 @@ export interface DotdotdotProps {
   useNativeClamp?: boolean,
   className?: string,
   tagName?: string,
+  splitOnChars?: string[],
+  splitEveryChars?: number,
+  animate?: boolean,
 }
 
 export default class Dotdotdot extends React.Component<DotdotdotProps> { }

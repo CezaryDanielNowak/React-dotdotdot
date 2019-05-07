@@ -45,6 +45,7 @@ Dotdotdot.prototype.dotdotdot = function(container) {
       'animate',
       'clamp',
       'splitOnChars',
+      'splitEveryChars',
       'truncationChar',
       'truncationHTML',
       'useNativeClamp'
