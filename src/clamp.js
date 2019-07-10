@@ -112,9 +112,9 @@
       if (lh == 'normal') {
         // Normal line heights vary from browser to browser. The spec recommends
         // a value between 1.0 and 1.2 of the font size. Using 1.1 to split the diff.
-        lh = parseInt(computeStyle(elem, 'font-size'), 10) * 1.2;
+        lh = parseFloat(computeStyle(elem, 'font-size')) * 1.2;
       }
-      return parseInt(lh, 10);
+      return Math.round(parseFloat(lh));
     }
 
 
