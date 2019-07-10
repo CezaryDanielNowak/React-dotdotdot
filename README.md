@@ -73,6 +73,10 @@ Known issues:
 
 Changelog
 -----------------
+1.3.1
+- Update TypeScript definition to add missing props (thanks @tuxracer)
+- round line-height value from computed float value - IE11 fix (thanks @YoonjiJang)
+
 1.3.0
 - `useNativeClamp` prop is set to false by default, it was causing some issues.
 - Comments are not counted as a text anymore

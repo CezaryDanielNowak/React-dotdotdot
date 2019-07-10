@@ -1,6 +1,6 @@
 {
   "name": "react-dotdotdot",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Multiline text ellipsis for react",
   "main": "src/index.js",
   "typings": "src/index.d.ts",

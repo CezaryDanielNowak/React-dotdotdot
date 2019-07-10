@@ -23237,9 +23237,9 @@ module.exports = function pick(obj, keys) {
       if (lh == 'normal') {
         // Normal line heights vary from browser to browser. The spec recommends
         // a value between 1.0 and 1.2 of the font size. Using 1.1 to split the diff.
-        lh = parseInt(computeStyle(elem, 'font-size'), 10) * 1.2;
+        lh = parseFloat(computeStyle(elem, 'font-size')) * 1.2;
       }
-      return parseInt(lh, 10);
+      return Math.round(parseFloat(lh));
     }
 
 
@@ -23259,16 +23259,24 @@ module.exports = function pick(obj, keys) {
       //Current element has children, need to go deeper and get last child as a text node
       if (elem.lastChild.children && elem.lastChild.children.length > 0) {
         return getLastChild(Array.prototype.slice.call(elem.children).pop());
-      }
-      //Handle scenario where the last child is white-space node
-      else if (!elem.lastChild || !elem.lastChild.nodeValue || elem.lastChild.nodeValue === '' || elem.lastChild.nodeValue == opt.truncationChar) {
+      } else if (
+        !elem.lastChild
+        || !elem.lastChild.nodeValue
+        || elem.lastChild.nodeValue == opt.truncationChar
+        || elem.lastChild.nodeType === Node.COMMENT_NODE
+      ) {
+        // Handle scenario where the last child is white-space node
         var sibling = elem.lastChild;
         do {
           if (!sibling) {
             return;
           }
-          //TEXT_NODE
-          if (sibling.nodeType === 3 && ['', opt.truncationChar].indexOf(sibling.nodeValue) === -1) {
+          // TEXT_NODE
+          if (
+            sibling.nodeType === 3
+            && ['', opt.truncationChar].indexOf(sibling.nodeValue) === -1
+            && elem.lastChild.nodeType !== Node.COMMENT_NODE
+          ) {
             return sibling;
           }
           if (sibling.lastChild) {
@@ -23457,7 +23465,7 @@ Dotdotdot.prototype.dotdotdot = function(container) {
   if (!container) {
     return;
   }
-  
+
   if (this.props.clamp) {
     if (container.length) {
       throw new Error('Please provide exacly one child to dotdotdot');
@@ -23503,7 +23511,7 @@ Dotdotdot.propTypes = {
 
 Dotdotdot.defaultProps = {
   truncationChar: '\u2026',
-  useNativeClamp: true,
+  useNativeClamp: false,
   tagName: 'div'
 };
 
