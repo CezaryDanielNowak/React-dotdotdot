@@ -41,6 +41,10 @@ Dotdotdot.prototype.dotdotdot = function(container) {
     if (container.length) {
       throw new Error('Please provide exacly one child to dotdotdot');
     }
+
+    if (!this._originalContent) this._originalContent = container.innerHTML
+    container.innerHTML = this._originalContent
+
     clamp(container, pick(this.props, [
       'animate',
       'clamp',
