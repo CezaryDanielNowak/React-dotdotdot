@@ -81,7 +81,8 @@
         };
       }
 
-      return win.getComputedStyle(elem, null).getPropertyValue(prop);
+      const computedStyle = win.getComputedStyle(elem, null);
+      return computedStyle ? computedStyle.getPropertyValue(prop) : null;
     }
 
     /**
